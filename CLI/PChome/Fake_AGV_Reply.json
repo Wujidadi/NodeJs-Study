@@ -1,0 +1,68 @@
+{
+    "header": {
+        "warehouse_code": "geekplus",
+        "interface_code": "feedback_outbound_container",
+        "user_id": "fakeReplyByWCS",
+        "user_key": ""
+    },
+    "body": {
+        "warehouse_code": "geekplus",
+        "container_list": [
+            {
+                "container_code": "99ZA49614",
+                "container_type": 2,
+                "pallet_code": "",
+                "sku_amount": 8,
+                "sku_type_amount": 2,
+                "creation_date": 1651849614647,
+                "picker": "FAKE",
+                "sku_list": [
+                    {
+                        "out_order_code": "P20220504000001",
+                        "item": 1,
+                        "sku_code": "T220112-A01-00000001",
+                        "sku_level": 1,
+                        "amount": 2,
+                        "owner_code": "010001",
+                        "expiration_date": 1672502400000,
+                        "out_batch_code": "220112001",
+                        "pick_order_item_finish_time": 1651652934000,
+                        "lack_flag": 0,
+                        "is_last_container": 1,
+                        "container_amount": 1,
+                        "sequence_no": [],
+                        "shelf_bin_list": [
+                            {
+                                "shelf_code": "FSC20220506230654",
+                                "shelf_bin_code": "FSB20220506230654",
+                                "quantity": 2
+                            }
+                        ]
+                    },
+                    {
+                        "out_order_code": "P20220504000001",
+                        "item": 2,
+                        "sku_code": "T220112-A01-00000002",
+                        "sku_level": 1,
+                        "amount": 6,
+                        "owner_code": "010001",
+                        "expiration_date": 1672502400000,
+                        "out_batch_code": "220112002",
+                        "pick_order_item_finish_time": 1651652972000,
+                        "lack_flag": 0,
+                        "is_last_container": 1,
+                        "container_amount": 1,
+                        "sequence_no": [],
+                        "shelf_bin_list": [
+                            {
+                                "shelf_code": "FSC20220506230655",
+                                "shelf_bin_code": "FSB20220506230655",
+                                "quantity": 6
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
