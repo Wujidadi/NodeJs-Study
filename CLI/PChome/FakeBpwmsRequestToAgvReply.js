@@ -15,7 +15,7 @@ fs.readFile(src, 'utf-8', function(err, dataStr) {
             if (error) {
                 console.log(`寫入 ${dst} 失敗`);
             } else {
-                console.log('轉換完畢')
+                console.log(helper.colorText('轉換完畢', 'Gold'));
             }
         });
     }
