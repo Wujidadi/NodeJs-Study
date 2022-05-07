@@ -25,3 +25,6 @@ out/
 
 # VS Code related
 .vscode/
+
+# For this project
+CLI/PChome/Fake_AGV_Reply.json
