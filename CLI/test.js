@@ -1,9 +1,8 @@
-const hexColorCode = '#FFD700';
-const hexR = hexColorCode.slice(1, 3);
-const hexG = hexColorCode.slice(3, 5);
-const hexB = hexColorCode.slice(5);
-const decR = parseInt(hexR, 16);
-const decG = parseInt(hexG, 16);
-const decB = parseInt(hexB, 16);
+const moment = require('moment');
 
-console.log(decR, decG, decB);
+// const dt = moment().format('YYYY-MM-DD HH:mm:ss.SSS');
+// const dt = moment(new Date(1203440000000).getTime()).format('YYYY-MM-DD HH:mm:ss.SSS');
+const dt = parseInt(moment().format('x'));
+// const dt = moment('19870125082615', 'YYYYMMDDHHmmss').format('YYYY-MM-DD HH:mm:ss.SSS');
+
+console.log(dt);
