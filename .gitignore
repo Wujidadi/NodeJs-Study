@@ -27,4 +27,5 @@ out/
 .vscode/
 
 # For this project
-CLI/PChome/Fake_AGV_Reply.json
+CLI/PChome/FakeBpwmsRequestToAgvReply/input/wcs_trans_log.WTL_DISPATCHER_RAW_DATA.json
+CLI/PChome/FakeBpwmsRequestToAgvReply/output/Fake_AGV_Reply.json

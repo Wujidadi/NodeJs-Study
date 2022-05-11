@@ -1,10 +1,10 @@
 const fs = require('fs');
 const path = require('path');
-const helper = require('./helper');
+const helper = require('../helper');
 const agvReply = require('./agvReply');
 
-const src = path.join(__dirname, './wcs_trans_log.WTL_DISPATCHER_RAW_DATA.json');
-const dst = path.join(__dirname, './Fake_AGV_Reply.json');
+const src = path.join(__dirname, './input/wcs_trans_log.WTL_DISPATCHER_RAW_DATA.json');
+const dst = path.join(__dirname, './output/Fake_AGV_Reply.json');
 
 fs.readFile(src, 'utf-8', function(err, dataStr) {
     if (err) {

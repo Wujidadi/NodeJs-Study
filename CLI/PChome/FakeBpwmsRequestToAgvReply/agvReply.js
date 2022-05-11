@@ -1,18 +1,20 @@
-const dayJs = require('dayjs');
+const moment = require('moment');
 
 function buildAgvReply(data) {
     const ownerCode = '010001';
+    const orderCode = data.OrderCode;
+    const rawSkuList = data.SkuList;
     const startTime = new Date().getTime();
     const containerCode = randomContainerCodeBySecond(startTime);
     const creationDate = startTime;
-    const compactTime = dayJs(startTime).format('YYYYMMDDHHmmss');
+    const compactTime = moment(startTime).format('YYYYMMDDHHmmss');
     let fakeCode = Number(compactTime);
 
     let skuAmount = 0;
     let skuType = [];
     let skuList = [];
 
-    data.forEach((item, i) => {
+    rawSkuList.forEach((item, i) => {
         if (i > 0) {
             fakeCode++; 
         }
@@ -25,7 +27,7 @@ function buildAgvReply(data) {
         skuType.push(item.SkuCode);
 
         skuList.push({
-            'out_order_code': item.OrderCode,
+            'out_order_code': orderCode,
             'item': item.RowNum,
             'sku_code': item.SkuCode,
             'sku_level': 1,
@@ -33,7 +35,7 @@ function buildAgvReply(data) {
             'owner_code': ownerCode,
             'expiration_date': Date.parse(item.ExpiryDate),
             'out_batch_code': item.OutBatchCode,
-            'pick_order_item_finish_time': Date.parse(item.CompleteTime),
+            'pick_order_item_finish_time': (item.CompleteTime !== undefined && item.CompleteTime !== null) ? Date.parse(item.CompleteTime) : new Date().getTime(),
             'lack_flag': 0,
             'is_last_container': 1,
             'container_amount': 1,
