@@ -30,7 +30,7 @@ function buildAgvReply(data) {
             'out_order_code': orderCode,
             'item': item.RowNum,
             'sku_code': item.SkuCode,
-            'sku_level': 1,
+            'sku_level': item.SkuLevel,
             'amount': item.SkuQty,
             'owner_code': ownerCode,
             'expiration_date': Date.parse(item.ExpiryDate),
