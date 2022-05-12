@@ -81,8 +81,8 @@ function buildAgvReply(data) {
 function randomContainerCodeBySecond(time) {
     const timestamp = !isNaN(time) ? time : new Date().getTime();
     const secondTimestamp = Math.floor(timestamp / 1000);
-    const last3DigitOfSecondTimestamp = secondTimestamp.toString().slice(-5);
-    return `99ZA${last3DigitOfSecondTimestamp}`;
+    const last5DigitOfSecondTimestamp = secondTimestamp.toString().slice(-5);
+    return `99ZA${last5DigitOfSecondTimestamp}`;
 }
 
 module.exports = { buildAgvReply, randomContainerCodeBySecond };
